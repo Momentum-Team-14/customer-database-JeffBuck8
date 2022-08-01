@@ -19,17 +19,17 @@ function showCustomerName(customerArray) {
         customerDiv.appendChild(imageDiv)
         customerDiv.appendChild(nameDiv)
         
+        customerDiv.appendChild(nameDiv)
+        container.appendChild(customerDiv)
         let emailDiv = document.createElement("div")
         emailDiv.classList.add("email")
         emailDiv.innerText = `${customer.email}`
         customerDiv.appendChild(emailDiv)
-        
+
         let streetDiv = document.createElement("div")
         streetDiv.classList.add("street")
         streetDiv.innerText = `${customer.location.street.number} ${customer.location.street.name}`
         customerDiv.appendChild(streetDiv)
-        customerDiv.appendChild(nameDiv)
-        container.appendChild(customerDiv)
 
         let stateAbbrev = nameToAbbr (`${customer.location.state}`)
         let stateDiv = document.createElement("div")
